@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+.nav {
+  width: 100%;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header {
+  text-align: center;
+}
+
+.location {
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #e6e6e6;
+  color: #383838;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.location::before {
+  content: url("/location.74bdc156.svg");
+  margin-right: 10px;
+}
+
+.intro {
+  background-color: #f0f0f0;
+  padding: 30px 30px;
+}
+.intro .button {
+  color: #fff;
+  font-weight: 500;
+  font-size: 12px;
+  padding: 15px 20px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(0deg, #9356dc 30%, #ff79da);
+  box-shadow: #a5a5a5 0 4px 8px;
+}
+
+.footer {
+  background-color: #383838;
+  padding: 20px 20px;
+  color: #fff;
+}
+.footer p {
+  font-size: 15px;
+  margin: 0;
+}
+.footer p.thin {
+  margin: 10px 0;
+}
+.footer-logo {
+  width: 100px;
+  height: auto;
+  margin: 10px 0;
+}
+.footer-icon {
+  margin-right: 15px;
+}
+.footer-icon i {
+  width: 15px;
+  height: auto;
+}
+.footer-item_flex {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.fonctionnement-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.fonctionnement-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin-right: -15px;
+  z-index: 2;
+  color: #fff;
+  background-color: #9356dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fonctionnement-options {
+  width: calc(100% - 95px);
+  padding: 10px 40px;
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  box-shadow: #c4c4c4 0 4px 10px;
+  display: flex;
+  align-items: center;
+}
+.fonctionnement-options p {
+  font-size: 15px;
+  font-weight: bold;
+}
+.fonctionnement-icon {
+  color: #858585;
+  margin-right: 30px;
+  font-size: 20px;
+}
+
+.restaurants {
+  background-color: #f0f0f0;
+}
+.restaurants a {
+  text-decoration: none !important;
+}
+.restaurants-visuel {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.restaurants-visuel img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 20px 20px 0 0;
+}
+.restaurants-visuel_description {
+  box-shadow: 0 0 15px #c2c2c2;
+  background-color: white;
+  border-radius: 0 0 20px 20px;
+  padding: 10px;
+  position: relative;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.restaurants-visuel_description p {
+  margin-bottom: 5px;
+  color: black;
+}
+.restaurants-visuel_icon {
+  color: transparent;
+  font-size: 20px;
+  transform: scaleX(0.95);
+}
+.restaurants-visuel_icon::before {
+  -webkit-text-stroke: 1px #383838;
+}
+.restaurants-visuel_icon:hover {
+  background: -webkit-linear-gradient(-120deg, #9356dc 30%, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants-visuel_icon:hover::before {
+  -webkit-text-stroke: 1px #fff;
+}
+
+.blanc {
+  color: #fff;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-family: "Shrikhand", cursive;
+}
+
+.h1 {
+  font-size: 25px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+@media (min-width: 320px) {
+  .h1 {
+    font-size: calc(3.2258064516vw + 14.6774193548px);
+  }
+}
+@media (min-width: 475px) {
+  .h1 {
+    font-size: 30px;
+  }
+}
+
+.h4 {
+  font-size: 15px;
+  line-height: 1.1;
+  font-weight: 300;
+}
+@media (min-width: 320px) {
+  .h4 {
+    font-size: calc(1.935483871vw + 8.8064516129px);
+  }
+}
+@media (min-width: 475px) {
+  .h4 {
+    font-size: 18px;
+  }
+}
+
+section {
+  padding: 30px 20px;
+}
+
+.violet {
+  color: #9356dc;
+}
+.violet_bg {
+  background-color: #9356dc !important;
+}
+
+.violet-light {
+  color: #9458dc;
+}
+.violet-light_bg {
+  background-color: #f2eafb;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.thin {
+  font-weight: 300 !important;
+}
+
+/*# sourceMappingURL=/main.77bb5cfd.css.map */

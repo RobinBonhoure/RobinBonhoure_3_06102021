@@ -1,0 +1,32 @@
+// MIXINS
+
+@function strip-unit($number) {
+    @if type-of($number) == "number" and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+
+@mixin fluid-text($min-font-size, $max-font-size, $line-height, $break-start, $break-end) {
+    /////
+    // Calculations font size
+    /////
+    $fsm: (strip-unit($max-font-size) - strip-unit($min-font-size)) /
+        (strip-unit($break-end) - strip-unit($break-start));
+    $fsb: #{$min-font-size - $fsm * $break-start};
+    $fsmx: #{$fsm * 100vw};
+    /////
+    // Output
+    /////
+    font-size: #{$min-font-size};
+    line-height: #{$line-height};
+
+    @media (min-width: #{$break-start}) {
+        font-size: calc(#{$fsmx} + #{$fsb});
+    }
+
+    @media (min-width: $break-end) {
+        font-size: #{$max-font-size};
+    }
+}

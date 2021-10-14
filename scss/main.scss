@@ -1,0 +1,65 @@
+@import 'base/reset';
+@import 'base/fonts';
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'layout/nav';
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'pages/accueil';
+@import 'pages/restaurant';
+
+.blanc {
+    color: $blanc;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    font-family: "Shrikhand", cursive;
+}
+
+.h1 {
+    @include fluid-text(25px, 30px, 1.1, 320px, 475px);
+    font-weight: 900;
+}
+.h4 {
+    @include fluid-text(15px, 18px, 1.1, 320px, 475px);
+    font-weight: 300;
+}
+
+section {
+    padding: 30px 20px;
+}
+
+
+.violet {
+    color: $violet;
+    &_bg {
+        background-color: $violet!important;
+    }
+}
+
+.violet-light {
+    color: lighten($violet, 0.5);
+    &_bg {
+        background-color: lighten($violet, 35%);
+    }
+}
+
+.bold {
+    font-weight: bold!important;
+}
+
+.thin {
+    font-weight: 300!important;
+}

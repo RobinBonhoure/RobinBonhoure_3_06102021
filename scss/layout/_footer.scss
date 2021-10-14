@@ -1,0 +1,32 @@
+// FOOTER
+.footer {
+    background-color: $gris;
+    padding: 20px 20px;
+    color: $blanc;
+    p {
+        font-size: 15px;
+        margin: 0;
+        &.thin {
+            margin: 10px 0;
+        }
+    }
+    &-logo {
+        width: 100px;
+        height: auto;
+        margin: 10px 0;
+    }
+    &-icon {
+        margin-right: 15px;
+        & i {
+            width: 15px;
+            height: auto;
+        }
+    }
+    &-item {
+        &_flex {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+// FONCTIONNEMENT
+.fonctionnement {
+    &-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    &-number {
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        margin-right: -15px;
+        z-index: 2;
+        color: $blanc;
+        background-color: $violet;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-options {
+        // height: 50px;
+        width: calc(100% - 95px);
+        padding: 10px 40px;
+        border-radius: 15px;
+        background-color: $gris-light;
+        box-shadow: #c4c4c4 0 4px 10px;
+        display: flex;
+        align-items: center;
+        p {
+            font-size: 15px;
+            font-weight: bold;
+        }
+    }
+    &-icon {
+        color: lighten($gris, 30%);
+        margin-right: 30px;
+        font-size: 20px;
+    }
+}
+
+// RESTAURANTS
+.restaurants {
+    background-color: $gris-light;
+    a {
+        text-decoration: none !important;
+    }
+
+    &-visuel {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        & img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: center center;
+            border-radius: 20px 20px 0 0;
+        }
+        &_description {
+            box-shadow: 0 0 15px rgb(194, 194, 194);
+            background-color: white;
+            border-radius: 0 0 20px 20px;
+            padding: 10px;
+            position: relative;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p {
+                margin-bottom: 5px;
+                color: black;
+            }
+        }
+        &_icon {
+            color: transparent;
+            font-size: 20px;
+            transform: scaleX(0.95);
+            &::before {
+                -webkit-text-stroke: 1px $gris;
+            }
+            &:hover {
+                background: -webkit-linear-gradient(-120deg, $violet 30%, $rose);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                &::before {
+                    -webkit-text-stroke: 1px $blanc;
+                }
+            }
+        }
+    }
+}
