@@ -4,6 +4,16 @@
         display: flex;
         align-items: center;
         margin-bottom: 20px;
+        @media (min-width:1000px) {
+            margin: 0 10px;
+        }
+        &_container {
+            display: flex;
+            flex-direction: column;
+            @media (min-width:1000px) {
+                flex-direction: row;
+            }
+        }
     }
     &-number {
         width: 30px;
@@ -43,8 +53,18 @@
     background-color: $gris-light;
     a {
         text-decoration: none !important;
+        @media (min-width:1000px) {
+            width: 25%;
+            margin: 0 10px;
+        }
     }
-
+    &-container {
+        display: flex;
+        flex-direction: column;
+        @media (min-width:1000px) {
+            flex-direction: row;
+        }
+    }
     &-visuel {
         position: relative;
         display: flex;
