@@ -46,6 +46,7 @@
     }
 
     &-visuel {
+        position: relative;
         display: flex;
         flex-direction: column;
         margin-bottom: 20px;
@@ -72,6 +73,7 @@
             }
         }
         &_icon {
+            cursor: pointer;
             color: transparent;
             font-size: 20px;
             transform: scaleX(0.95);
@@ -80,12 +82,23 @@
             }
             &:hover {
                 background: -webkit-linear-gradient(-120deg, $violet 30%, $rose);
+                transform: scaleX(1) scaleY(1.05);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 &::before {
                     -webkit-text-stroke: 1px $blanc;
                 }
             }
+        }
+        &_new {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            border-radius: 2px;
+            padding: 7px 12px;
+            color: darken($vert, 30%);
+            font-weight: bold;
+            background-color: $vert;
         }
     }
 }

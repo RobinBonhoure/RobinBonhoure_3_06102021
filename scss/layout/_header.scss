@@ -19,16 +19,4 @@
 .intro {
     background-color: $gris-light;
     padding: 30px 30px;
-    & .button {
-        color: $blanc;
-        font-weight: 500;
-        font-size: 12px;
-        // width: 180px;
-        // height: 40px;
-        padding: 15px 20px;
-        border-radius: 50px;
-        border: none;
-        background: linear-gradient(0deg, $violet 30%, $rose);
-        box-shadow: #a5a5a5 0 4px 8px;
-    }
 }

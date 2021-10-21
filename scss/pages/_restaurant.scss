@@ -1,0 +1,152 @@
+.restaurant {
+    &-back {
+        position: absolute;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        top: 0;
+        left: 30px;
+        i {
+            font-size: 25px;
+            color: black;
+        }
+    }
+    &-header {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    &-menu {
+        padding: 40px 20px;
+        background-color: $gris-light;
+        border-radius: 40px 40px 0 0;
+        margin-top: -40px;
+        position: relative;
+        &_item {
+            margin-bottom: 40px;
+        }
+        &_titre {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 15px;
+        }
+        &_itemTitle {
+            font-size: 18px;
+            font-weight: normal;
+            color: $gris;
+            margin-bottom: 5px;
+        }
+        &_divItemContainer {
+            height: 272px;
+            // overflow: hidden;
+            @for $i from 1 through 3 {
+                & .restaurant-menu_itemDetail:nth-child(#{$i}) {
+                    animation: showMenuItemLoad 2s forwards 0.3s + $i * 0.3s;
+                }
+            }
+        }
+        &_itemDetailContainer {
+            display: flex;
+        }
+        &_itemDetail {
+            overflow: hidden;
+            background-color: $blanc;
+            border-radius: 20px;
+            margin: 20px 0;
+            box-shadow: #c4c4c4 0 4px 10px;
+            opacity: 0;
+            transform: translateY(100%);
+
+            h3 {
+                margin-top: 0;
+                margin-bottom: 5px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                padding-right: 30px;
+            }
+            p {
+                margin: 0;
+                color: $gris;
+            }
+            &:hover {
+                .restaurant-menu_itemVert {
+                    width: 80px;
+                    i {
+                        transform: translateX(0) rotate(360deg);
+                    }
+                }
+            }
+        }
+        &_itemVert {
+            border-radius: 0 20px 20px 0;
+            transform-origin: right;
+            width: 0px;
+            background-color: $vert;
+            transition: all 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i {
+                color: $blanc;
+                font-size: 22px;
+                transform: translateX(30px) rotate(0);
+                transition: all 0.5s ease;
+            }
+        }
+        &_itemDetailFlex {
+            display: flex;
+            justify-content: space-between;
+            & p:first-child {
+                padding-right: 30px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            & p:last-child {
+                margin-right: 30px;
+            }
+        }
+        &_itemDetailFlex2 {
+            width: 100%;
+            padding: 15px 0px 15px 10px;
+        }
+        &_button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button {
+                cursor: pointer;
+                padding: 20px 60px;
+                font-size: 15px;
+                font-weight: 600;
+                transition: all 0.2s ease;
+                margin-top: 20px;
+                margin-bottom: 50px;
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
+.souligne-vert {
+    height: 3px;
+    width: 50px;
+    background-color: $vert;
+}
+
+// KEYFRAMES
+
+@keyframes showMenuItemLoad {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
