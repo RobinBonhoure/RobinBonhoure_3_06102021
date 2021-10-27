@@ -1,5 +1,14 @@
 // FOOTER
 .footer {
+    a {
+        color: $blanc;
+    }
+    @media (min-width: 1000px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
     background-color: $gris;
     padding: 20px 20px;
     color: $blanc;

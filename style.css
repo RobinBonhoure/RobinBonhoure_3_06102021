@@ -39,6 +39,17 @@
   padding: 20px 20px;
   color: #fff;
 }
+.footer a {
+  color: #fff;
+}
+@media (min-width: 1000px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 .footer p {
   font-size: 15px;
   margin: 0;
@@ -75,8 +86,90 @@
   border: none;
   background: linear-gradient(0deg, #9356dc 30%, #ff79da);
   box-shadow: #a5a5a5 0 4px 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.buttonViolet:hover {
+  opacity: 0.7;
 }
 
+.loader_container {
+  filter: blur(30px) contrast(60px);
+}
+.loader_1 {
+  width: 30px;
+  height: 30px;
+  background-color: #9356dc;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: animationLoader1 1s linear forwards infinite;
+  transform-origin: center right;
+}
+.loader_2 {
+  width: 30px;
+  height: 30px;
+  background-color: #99e2d0;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: animationLoader2 1s linear forwards infinite;
+  transform-origin: center left;
+}
+
+@keyframes animationLoader1 {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  50% {
+    transform: rotate(360deg) translateX(10px);
+  }
+  100% {
+    transform: rotate(720deg) translateX(0);
+  }
+}
+@keyframes animationLoader2 {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  50% {
+    transform: rotate(360deg) translateX(-10px);
+  }
+  100% {
+    transform: rotate(720deg) translateX(0);
+  }
+}
+.animationEnter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  background-color: #f0f0f0;
+  width: 100%;
+  height: calc(100vh - 60px);
+  top: 60px;
+  left: 0;
+  position: absolute;
+  animation: animationEnter 0.3s ease-out 1.7s forwards;
+}
+
+@keyframes animationEnter {
+  0% {
+    opacity: 1;
+    z-index: 9999;
+  }
+  99% {
+    opacity: 0;
+    z-index: 9999;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@media (min-width: 1000px) {
+  .fonctionnement h2 {
+    text-align: center;
+  }
+}
 .fonctionnement-item {
   display: flex;
   align-items: center;
@@ -95,6 +188,7 @@
 @media (min-width: 1000px) {
   .fonctionnement-item_container {
     flex-direction: row;
+    justify-content: center;
   }
 }
 .fonctionnement-number {
@@ -131,6 +225,11 @@
 .restaurants {
   background-color: #f0f0f0;
 }
+@media (min-width: 1000px) {
+  .restaurants h2 {
+    text-align: center;
+  }
+}
 .restaurants a {
   text-decoration: none !important;
 }
@@ -143,6 +242,7 @@
 .restaurants-container {
   display: flex;
   flex-direction: column;
+  padding: 10px 0;
 }
 @media (min-width: 1000px) {
   .restaurants-container {
@@ -185,6 +285,7 @@
   color: transparent;
   font-size: 20px;
   transform: scaleX(0.95);
+  transition: all 0.2s ease;
 }
 .restaurants-visuel_icon::before {
   -webkit-text-stroke: 1px #383838;
@@ -236,6 +337,13 @@
 .restaurant-menu_item {
   margin-bottom: 40px;
 }
+@media (min-width: 1000px) {
+  .restaurant-menu_itemContainerFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 .restaurant-menu_titre {
   display: flex;
   align-items: center;
@@ -261,13 +369,6 @@
 .restaurant-menu_divItemContainer .restaurant-menu_itemDetail:nth-child(4) {
   animation: showMenuItemLoad 1.5s forwards 1.5s;
 }
-@media (min-width: 1000px) {
-  .restaurant-menu_divItemContainer {
-    display: flex;
-    flex-direction: row;
-    height: unset;
-  }
-}
 .restaurant-menu_itemDetailContainer {
   display: flex;
 }
@@ -275,6 +376,7 @@
   overflow: hidden;
   background-color: #fff;
   border-radius: 20px;
+  width: 100%;
   margin: 20px 0;
   box-shadow: #c4c4c4 0 4px 10px;
   opacity: 0;
@@ -283,7 +385,8 @@
 @media (min-width: 1000px) {
   .restaurant-menu_itemDetail {
     margin: 20px 10px;
-    width: 330px;
+    width: 30vw;
+    max-width: 600px;
   }
 }
 .restaurant-menu_itemDetail h3 {
@@ -356,15 +459,10 @@
   justify-content: center;
 }
 .restaurant-menu_button button {
-  cursor: pointer;
   padding: 20px 60px;
   font-size: 15px;
-  transition: all 0.2s ease;
   margin-top: 20px;
   margin-bottom: 50px;
-}
-.restaurant-menu_button button:hover {
-  opacity: 0.7;
 }
 
 .souligne-vert {
@@ -442,6 +540,10 @@ body {
 
 p {
   font-size: 16px;
+}
+
+a {
+  text-decoration: none;
 }
 
 section {

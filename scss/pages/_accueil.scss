@@ -1,5 +1,88 @@
+// ANIMATION ENTER
+.loader {
+    &_container {
+        filter: blur(30px) contrast(60px);  
+    }
+    &_1 {
+        width: 30px;
+        height: 30px;
+        background-color: $violet;
+        border-radius: 50%;
+        opacity: 0.7;
+        animation: animationLoader1 1s linear forwards infinite;
+        transform-origin: center right;
+    }
+    &_2 {
+        width: 30px;
+        height: 30px;
+        background-color: $vert;
+        border-radius: 50%;
+        opacity: 0.7;
+        animation: animationLoader2 1s linear forwards infinite;
+        transform-origin: center left;
+    }
+}
+
+@keyframes animationLoader1 {
+    0% {
+        transform: rotate(0deg) translateX(0);
+    }
+    50% {
+        transform: rotate(360deg) translateX(10px);
+    }
+    100% {
+        transform: rotate(720deg) translateX(0);
+    }
+}
+
+@keyframes animationLoader2 {
+    0% {
+        transform: rotate(0deg) translateX(0);
+    }
+    50% {
+        transform: rotate(360deg) translateX(-10px);
+    }
+    100% {
+        transform: rotate(720deg) translateX(0);
+    }
+}
+
+.animationEnter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    background-color: $gris-light;
+    width: 100%;
+    height: calc(100vh - 60px);
+    top: 60px;
+    left: 0;
+    position: absolute;
+    animation: animationEnter 0.3s ease-out 1.7s forwards;
+}
+
+@keyframes animationEnter {
+    0% {
+        opacity: 1;
+        z-index: 9999;
+    }
+    99% {
+        opacity: 0;
+        z-index: 9999;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
 // FONCTIONNEMENT
 .fonctionnement {
+    h2 {
+        @media (min-width:1000px) {
+            text-align: center;
+        }
+    }
     &-item {
         display: flex;
         align-items: center;
@@ -13,6 +96,7 @@
             flex-direction: column;
             @media (min-width:1000px) {
                 flex-direction: row;
+                justify-content: center;
             }
         }
     }
@@ -50,6 +134,11 @@
 
 // RESTAURANTS
 .restaurants {
+    h2 {
+        @media (min-width:1000px) {
+            text-align: center;
+        }
+    }
     background-color: $gris-light;
     a {
         text-decoration: none !important;
@@ -61,6 +150,7 @@
     &-container {
         display: flex;
         flex-direction: column;
+        padding: 10px 0;
         @media (min-width:1000px) {
             flex-direction: row;
         }
@@ -100,6 +190,7 @@
             color: transparent;
             font-size: 20px;
             transform: scaleX(0.95);
+            transition: all 0.2s ease;
             &::before {
                 -webkit-text-stroke: 1px $gris;
             }
