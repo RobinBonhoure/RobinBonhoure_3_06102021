@@ -9,6 +9,7 @@
         }
         &_container {
             display: flex;
+            padding: 10px 0;
             flex-direction: column;
             @media (min-width:1000px) {
                 flex-direction: row;
@@ -28,9 +29,8 @@
         justify-content: center;
     }
     &-options {
-        // height: 50px;
         width: calc(100% - 95px);
-        padding: 10px 40px;
+        padding: 20px 40px;
         border-radius: 15px;
         background-color: $gris-light;
         box-shadow: #c4c4c4 0 4px 10px;
@@ -90,6 +90,9 @@
             p {
                 margin-bottom: 5px;
                 color: black;
+                b {
+                    font-size: 17px;
+                }
             }
         }
         &_icon {

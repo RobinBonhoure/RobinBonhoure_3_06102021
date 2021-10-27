@@ -1,4 +1,4 @@
-@import 'base/reset';
+// @import 'base/reset';
 @import 'base/fonts';
 
 @import 'abstracts/variables';
@@ -28,15 +28,26 @@ body {
 
 .title {
     font-family: "Shrikhand", cursive;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
 }
 
 .h1 {
     @include fluid-text(25px, 30px, 1.1, 320px, 475px);
     font-weight: 900;
+    margin: 20px 0;
+}
+.h3 {
+    font-weight: 600;
+    font-size: 17px;
 }
 .h4 {
     @include fluid-text(15px, 18px, 1.1, 320px, 475px);
     font-weight: 300;
+}
+
+p {
+    font-size: 16px;
 }
 
 section {
