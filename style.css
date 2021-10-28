@@ -93,9 +93,6 @@
   opacity: 0.7;
 }
 
-.loader_container {
-  filter: blur(30px) contrast(60px);
-}
 .loader_1 {
   width: 30px;
   height: 30px;
@@ -540,6 +537,7 @@ body {
 
 p {
   font-size: 16px;
+  margin: 0;
 }
 
 a {
