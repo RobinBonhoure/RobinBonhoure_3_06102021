@@ -370,6 +370,7 @@
   display: flex;
 }
 .restaurant-menu_itemDetail {
+  cursor: pointer;
   overflow: hidden;
   background-color: #fff;
   border-radius: 20px;

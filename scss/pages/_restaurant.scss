@@ -24,9 +24,6 @@
         position: relative;
         &_item {
             margin-bottom: 40px;
-            @media (min-width: 1000px) {
-                // width: calc(30% - 100px);
-            }
         }
         &_itemContainerFlex {
             @media (min-width: 1000px) {
@@ -49,7 +46,6 @@
             margin-bottom: 5px;
         }
         &_divItemContainer {
-            // height: 272px;
             @for $i from 1 through 4 {
                 & .restaurant-menu_itemDetail:nth-child(#{$i}) {
                     animation: showMenuItemLoad 1.5s forwards 0.3s + $i * 0.3s;
@@ -58,9 +54,9 @@
         }
         &_itemDetailContainer {
             display: flex;
-            // overflow: hidden;
         }
         &_itemDetail {
+            cursor: pointer;
             overflow: hidden;
             background-color: $blanc;
             border-radius: 20px;
