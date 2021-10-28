@@ -25,7 +25,7 @@
   justify-content: center;
 }
 .location::before {
-  content: url("../images/location.svg");
+  content: url("images/location.svg");
   margin-right: 10px;
 }
 

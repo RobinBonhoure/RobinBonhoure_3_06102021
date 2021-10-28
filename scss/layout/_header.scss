@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: center;
     &::before {
-        content: url("../images/location.svg");
+        content: url("images/location.svg");
         margin-right: 10px;
     }
 }
