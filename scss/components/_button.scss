@@ -13,5 +13,6 @@
         transition: all 0.2s ease;
         &:hover {
             opacity: 0.7;
+            box-shadow: #a5a5a5 0 5px 15px;
         }
     }
