@@ -40,10 +40,20 @@
             margin-bottom: 50px;
         }
         &_itemTitle {
+            position: relative;
             font-size: 18px;
             font-weight: normal;
             color: $gris;
             margin-bottom: 5px;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -8px;
+                height: 3px;
+                width: 50px;
+                background-color: $vert;
+            }
         }
         &_divItemContainer {
             @for $i from 1 through 4 {
@@ -150,12 +160,6 @@
             }
         }
     }
-}
-
-.souligne-vert {
-    height: 3px;
-    width: 50px;
-    background-color: $vert;
 }
 
 // KEYFRAMES
